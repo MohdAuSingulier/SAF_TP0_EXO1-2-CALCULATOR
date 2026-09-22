@@ -1,0 +1,29 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package Exo1.exo1;
+
+import java.util.Scanner;
+
+/**
+ * SAF Mohamed
+ * BDML 1 - EFREI Paris
+ * Programmation en Java - Exo 1
+ * Proposée par Madame Georgina ABI SEJAAN
+ * Le 22 Septembre 2026
+ */
+public class Exo1 {
+
+    public static void main(String[] args) {
+        String prenom;
+        Scanner sc;
+        sc = new Scanner(System.in);
+        System.out.println("Bonjour, quel est votre prenom ?");
+        prenom = sc.nextLine();
+        //Ajout :
+        System.out.println("Enchanté, " + prenom + " !");
+        System.out.println("Au revoir !");
+
+    }
+}

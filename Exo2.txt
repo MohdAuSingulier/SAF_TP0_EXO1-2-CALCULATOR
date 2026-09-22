@@ -1,0 +1,44 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package exo2;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Mohamed_SF
+ */
+public class Exo2 {
+
+ /**
+ * SAF Mohamed
+ * BDML 1 - EFREI Paris
+ * Programmation en Java - Exo 2
+ * Proposée par Madame Georgina ABI SEJAAN
+ * Le 22 Septembre 2026
+ */
+    public static void main(String[] args) {
+        //Declaration des variables
+        int nb; // nombre d'entiers à additionner
+        int result; // resultat
+        int ind; // indice
+        Scanner sc = new Scanner(System.in);
+        System.out.println("\n Entrer le nombre :");
+        nb=sc.nextInt(); // On demande a sc de donner le prochain entier
+        result=0;
+        
+        // Addition des nb premiers entiers
+        ind=1;
+        while (ind <= nb) {
+            result=result+ind;
+            //Ajout pour la correction : 
+            ind++; //Pareil que ind = ind + 1 comme vu en cours
+        }
+        
+        // Affichage du résultat
+        System.out.println();
+        System.out.println("La somme des "+ nb + "entiers est: "+result);
+    }
+}

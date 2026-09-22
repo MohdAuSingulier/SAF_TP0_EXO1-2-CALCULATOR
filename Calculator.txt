@@ -1,0 +1,69 @@
+/*
+ * Projet : Calculator
+ * Auteur : SAF Mohamed
+ * Classe : BDML 1 - EFREI Paris
+ * Cours : Programmation en Java - Exo 1
+ * Enseignante : Madame Georgina ABI SEJAAN
+ * Date : 22 Septembre 2026
+ */
+package calculator;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Mohamed_SF
+ */
+
+public class Calculator {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        // --- MENU & OPERATEUR ---
+        System.out.println("Please enter the operator:");
+        System.out.println("1) add");
+        System.out.println("2) substract");
+        System.out.println("3) multiply");
+        System.out.println("4) divide");
+        System.out.println("5) modulo");
+        int operateur = sc.nextInt();
+        
+        // AJOUT du TEST DE L'OPERATEUR ERRONÉ
+        // Si le nombre n'est pas entre 1 et 5, on met une erreur et on arrête tout.
+        if (operateur < 1 || operateur > 5) {
+            System.out.println("Error: Invalid operator! Please run the program again.");
+            return; // Cette ligne arrête le programme immédiatement
+        }
+        // OPERANDE 1 
+        System.out.println("Please enter the first number:");
+        double operande1 = sc.nextDouble();
+        
+        //OPERANDE 2 ---
+        System.out.println("Please enter the second number:");
+        double operande2 = sc.nextDouble();
+        
+        //  CALCULS AVEC IF / ELSE ---
+        double result = 0;
+        
+        if (operateur == 1) {
+            result = operande1 + operande2;
+        } else if (operateur == 2) {
+            result = operande1 - operande2;
+        } else if (operateur == 3) {
+            result = operande1 * operande2;
+        } else if (operateur == 4) {
+            // Attention la division par zéro dans la vraie vie, mais restons simple ici
+            result = operande1 / operande2;
+        } else if (operateur == 5) {
+            result = operande1 % operande2;
+        } else {
+            System.out.println("Invalid operator!");
+            return; // Arrête le programme si le choix n'est pas entre 1 et 5
+        }
+        
+        // Affichage final
+        System.out.println("The result is : " + result);
+    }
+}
+
